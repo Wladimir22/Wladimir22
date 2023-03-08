@@ -1,0 +1,11 @@
+p{color:red}
+
+
+.list__item {
+  background: bisque;
+}
+
+.item-2 {
+  background: burlywood;
+  display: inline-block;
+}

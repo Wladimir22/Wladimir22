@@ -1,0 +1,74 @@
+
+<body>
+
+
+<div class="col-lg-6">
+                    <canvas style="width: 100%;" id="myCanvas">
+                        <ul>
+                                                            <li><a href="https://yandex.ru/maps/197/barnaul/?ll=83.776860%2C53.346785&z=13" target="_blank">Ymap</a></li>
+                                                            <li><a href="https://www.google.com/maps" target="_blank">Gmap</a></li>
+                            
+                        </ul>
+                    </canvas>
+                </div>
+
+
+
+
+
+
+<script>jQuery(function ($) {
+	$('#myCanvas').tagcanvas({
+        textColour : '#000', // Цвет текста
+        maxSpeed : 0.03, // Максимальная скорость
+        minSpeed : 0.01,
+        shuffleTags : true
+	})
+jQuery('a[rel=fancybox]').fancybox({"maxWidth":"90%","maxHeight":"100%","playSpeed":7000,"padding":0,"fitToView":false,"width":"70%","height":"100%","autoSize":true,"closeClick":false,"openEffect":"elastic","closeEffect":"elastic","prevEffect":"elastic","nextEffect":"elastic","closeBtn":true,"openOpacity":true,"helpers":{"title":{"type":"float"},"buttons":[],"thumbs":{"width":68,"height":50},"overlay":{"css":{"background":"rgba(0, 0, 0, 0.8)"}}}});
+    $("#callbackForm").submit(function(e){
+        e.preventDefault();
+        
+        var _this = $(this);
+        
+        var fieldsForm = $(this).serializeArray();
+        var fields = {};
+        for(var a in fieldsForm){
+            fields[fieldsForm[a].name] = fieldsForm[a].value;
+        }
+        
+        console.log(fields);
+        console.log(fieldsForm);
+        
+        $.ajax({
+            url:"/site/callback-demo",
+            method:"POST",
+            dataType:"JSON",
+            data:fields,
+            success:function(response){
+                console.log(response);
+                if(response.success){
+                    $("#successCallback").show();
+                    setTimeout(function(){
+                        $("#successCallback").hide();
+                    }, 3000);
+                    _this[0].reset();
+                }
+                
+                if(!response.success){
+                    $("#errorCallback").html("");
+                    for(var a in response.errors){
+                        $("#errorCallback").append("<p>"+response.errors[a]+"</p>");
+                    }
+                    $("#errorCallback").show();
+                    setTimeout(function(){
+                        $("#errorCallback").hide();
+                    }, 3000);
+                }
+            }
+        });
+        
+        return false;
+    })
+});</script>
+
+</body>

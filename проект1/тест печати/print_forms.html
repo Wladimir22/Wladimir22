@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU" class="">
+
+<head>
+<title>Тест печати</title>
+
+
+<style>
+@media print {
+	.noprint { display: none; }
+	
+}
+</style>
+
+
+  <style>
+   body {
+    background:  url(img.jpg); /* Цвет фона и путь к файлу */
+   }
+  </style>
+</head>
+
+
+<body> 
+
+<h1 id="print-title">Заголовок</h1>
+<div id="print-img"><img src="img-1.jpg" /></div>
+<div id="print-text">Текст</div>
+
+<div id="elem">
+<div id="elem-1">Текст</div>
+</div>
+
+
+
+
+<a href="#" onclick="javascript:callPrint();">Печать</a>
+
+  <table id="tb">
+  <tr>
+   <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+  </tr>
+  </tr>
+     <td>10</td><td>9</td><td>8</td><td>7</td><td>6</td>
+	</tr>
+	  </tr>
+     <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	  </tr>
+     <td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+	</tr>
+</table>
+
+
+
+<script>
+function callPrint() {
+    var printCSS = '<link rel="stylesheet" href="css/print.css" type="text/css" />';
+    var printTitle = document.getElementById('print-title').innerHTML;
+    var printTable = document.getElementById('tb').innerHTML;
+    var printText = document.getElementById('print-text').innerHTML;
+    var windowPrint = window.open('','','left=50,top=50,width=800,height=640,toolbar=0,scrollbars=1,status=0');
+	let elem = document.getElementById('elem');
+	
+	windowPrint.document.write(printTable);
+
+
+
+
+    windowPrint.document.close();
+    windowPrint.focus();
+    windowPrint.print();
+    windowPrint.close();
+}
+</script>
+</body></html>
+
+

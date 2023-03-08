@@ -1,0 +1,46 @@
+
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег IFRAME</title>
+ </head>
+ <body>  
+ 
+   <script type="text/javascript">
+var chr = -1;
+var txt = 'Самопечатающийся текст Hello, World!';
+var l = txt.length;
+var p = "_";
+function printtext()
+{
+    chr++;
+    t = document.all["text"].innerHTML;
+    tt = t.substring(0,t.length-p.length);
+    if(txt.charAt(chr)!="<")
+    {
+        document.all["text"].innerHTML= tt + txt.charAt(chr) + p;
+    }
+    else {
+        document.all["text"].innerHTML= tt + txt.substring(chr, chr+4) + p;
+        chr=chr+3;
+    }
+    setTimeout("printtext()", 40);
+}
+function str(num) {
+    var s = "";
+    for(i=0; i<num; i++) {
+        s = s + " ";
+    }
+    return s ;
+}
+</script>
+
+<body onclick="javascript:printtext()">Content
+<font id="text"></font>
+   
+ </body>
+</html>
+
+
+
+

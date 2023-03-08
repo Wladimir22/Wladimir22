@@ -1,0 +1,17 @@
+<html>
+ <body>
+  <h1 align="center">Визитка</h1>
+  <p align="center"><img src="inImage.jpg"> </p>
+   
+<iframe name="imgFrame" style="width: 0; height: 0; border: 0;"></iframe>
+
+<script>
+var frame = window.frames['imgFrame'];
+frame.document.write('<body onload="window.print()"><img class="img" src="inImage.jpg"></body>');
+frame.document.close();
+</script>
+   
+   
+   
+ </body>
+</html>

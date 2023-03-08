@@ -1,0 +1,30 @@
+
+<html>
+ <body>  
+ 
+ <iframe name="imgFrame" style="width: 1; height: 1; border: 0;"></iframe>
+ 
+ 
+<script type="text/javascript">
+
+function printimg()
+{
+	var frame = window.frames['imgFrame'];
+		frame.document.write('<body onload="window.print()"><img class="img" src="img.jpg"></body>');
+		frame.document.close();
+
+}
+function str(num) {
+    for(i=0; i<num; i++) {
+        s = s + " ";
+    }
+    return s ;
+
+}
+</script>
+
+<body onclick="javascript:printimg()">Визитка
+<font id="text"></font>
+   
+ </body>
+</html>

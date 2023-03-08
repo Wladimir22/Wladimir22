@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Стили</title>
+  <link rel="stylesheet" type="text/css" href="mysite.css">
+  <link rel="stylesheet" type="text/css" href="http://www.mysite.ru/main.css">
+ </head>
+ 
+ 
+ 
+ 
+ <body>
+
+<div id="print-content">
+печать
+</div>
+
+<a onClick="javascript:CallPrint('print-content');" title="Распечатать проект">Рrint-form</a>
+
+
+	  <script>
+function CallPrint(strid) {
+  var prtContent = document.getElementById(strid);
+  var WinPrint = window.open('','','left=50,top=50,width=800,height=640,toolbar=0,scrollbars=1,status=0');
+  WinPrint.document.write('');
+  WinPrint.document.write(prtContent.innerHTML);
+  WinPrint.document.write('');
+  WinPrint.document.close();
+  WinPrint.focus();
+  WinPrint.print();
+  WinPrint.close();
+  prtContent.innerHTML=strOldOne;
+}
+</script>
+
+
+ </body>
+</html>
