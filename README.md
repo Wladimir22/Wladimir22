@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Wladimir22
 - 👀 I’m interested in programming
-- 🌱 I’m currently learning rect ntive
+- 🌱 I’m currently learning programming
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
