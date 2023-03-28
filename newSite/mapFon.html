@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Данные + карты</title>
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+  </style>
+
+
+
+
+
+</head>
+
+<body>
+
+<a id="print-this"   href="https://yandex.ru/maps/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;width=600&amp;height=333&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+
+			
+
+<p><a onclick="javascript:TestZero('print-this')">Заголовок</a></p> 			
+			
+			
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+					
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7edeaeb4d8f026947809b8f6b35a21c37a8d52795705cad0ee8b50e70a7fb114&amp;width=1062&amp;height=590&amp;lang=ru_RU&amp;scroll=true"></script>
+					
+<script type="text/javascript">	
+function TestZero(strid){
+
+        //Get the HTML of div
+        var imgSrtcture = document.getElementById(strid).innerHTML;
+        //Get the HTML of whole page
+        var oldPage = document.body.innerHTML;
+
+
+
+        document.body.innerHTML = 
+          "<html><body><table><tbody>" +
+		  "<tr><th ALIGN=center>"  + 
+		  imgSrtcture +	"</th><th ALIGN=center>"+ imgSrtcture + "</th><th ALIGN=center>" +
+		  imgSrtcture + "</th><th ALIGN=center>"+ imgSrtcture + "</th></tr>" +
+		  
+		  "<tr><th ALIGN=center>"  + 
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center> " +
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" +
+		  
+		  "<tr><th ALIGN=center>"  + 
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center>" +
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" + 
+		  "<tbody><table></body>";
+
+		//best table
+
+        	window.print();
+        	//Restore orignal HTML
+	oldPage .body.style.width = '3508px';
+	oldPage .body.style.height = '2480px';	
+       	 document.body.innerHTML = oldPage;
+}				
+</script>					
+					
+		 </body>
+</html>
