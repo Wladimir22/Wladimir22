@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/48149850/how-to-convert-google-map-with-route-into-image-in-javascript
+
