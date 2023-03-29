@@ -22,7 +22,9 @@
 
 <body>
 
-<a id="print-this"   href="https://yandex.ru/maps/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;width=600&amp;height=333&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+<a id="print-this"   href="https://yandex.ru/maps/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;width=600&amp;height=333&amp;lang=ru_RU" alt="" style="border: 0;"
+width="256" 
+height="142" /></a>
 
 			
 
@@ -46,24 +48,34 @@ function TestZero(strid){
         document.body.innerHTML = 
           "<html><body><table><tbody>" +
 		  "<tr><th ALIGN=center>"  + 
-		  imgSrtcture +	"</th><th ALIGN=center>"+ imgSrtcture + "</th><th ALIGN=center>" +
-		  imgSrtcture + "</th><th ALIGN=center>"+ imgSrtcture + "</th></tr>" +
+		  imgSrtcture +	"</th><th ALIGN=center>"+ imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th 		 		  ALIGN=center>" + imgSrtcture + "</th></tr>" +
 		  
 		  "<tr><th ALIGN=center>"  + 
-		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center> " +
-		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" +
-		  
-		  "<tr><th ALIGN=center>"  + 
-		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center>" +
-		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" + 
-		  "<tbody><table></body>";
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture +
+		  "</th><th ALIGN=center>" +  imgSrtcture + "</th></tr>" +
 
-		//best table
+		  "<tr><th ALIGN=center>"  +  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center> " +
+		  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" +
+
+		  "<tr><th ALIGN=center>"  +  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center> " +
+        	  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" +
+
+		  "<tr><th ALIGN=center>"  +  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th><th ALIGN=center> " +
+        	  imgSrtcture + "</th><th ALIGN=center>" + imgSrtcture + "</th></tr>" +
+
+		  "</tbody></table></body>";
+
+		//best table 877 - x4
 
         	window.print();
         	//Restore orignal HTML
+//'3508px' | '2480px' -
+//width="400" 
+//height="222"
 	oldPage .body.style.width = '3508px';
-	oldPage .body.style.height = '2480px';	
+	oldPage .body.style.height = '2480px';
+
+	
        	 document.body.innerHTML = oldPage;
 }				
 </script>					

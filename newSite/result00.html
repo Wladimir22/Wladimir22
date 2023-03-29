@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Тест печати</title>
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+@media print {
+	.noprint { display: none; }
+	
+}
+
+.col-12{
+font-size: 5rem;
+
+}
+
+
+
+   body {
+    background:  url(img.jpg); /* Цвет фона и путь к файлу */
+   }
+   
+   
+    .bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+  }
+
+  @media (min-width: 333px) {
+.bd-placeholder-img-lg {
+  font-size: 5rem;
+}
+  }
+
+  .b-example-divider {
+height: 3rem;
+background-color: rgba(0, 0, 0, .1);
+border: solid rgba(0, 0, 0, .15);
+border-width: 1px 0;
+box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+flex-shrink: 0;
+width: 1.5rem;
+height: 100vh;
+  }
+
+  .bi {
+vertical-align: -.125em;
+fill: currentColor;
+  }
+
+  .nav-scroller {
+position: relative;
+z-index: 2;
+height: 2.75rem;
+overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+display: flex;
+flex-wrap: nowrap;
+padding-bottom: 1rem;
+margin-top: -1px;
+overflow-x: auto;
+text-align: center;
+white-space: nowrap;
+-webkit-overflow-scrolling: touch;
+  }
+  </style>
+  
+  
+</head>
+
+ <body>  
+
+<p><a onclick="javascript:TestZero('print-this')">Печать визиток</a></p> 
+
+<p ALIGN=right>Добавить карту</p>
+
+
+
+
+  <table id="tb" >
+<colgroup span="1" style="background:purple;"></colgroup>
+  <tr style="background:purple;">
+   <td> 1</td><td> 2</td><td> 3</td><td> 4</td><td> 5</td>
+  </tr>
+  </tr>
+     <td>10</td><td> 9</td><td> 8</td><td> 7</td><td> 6</td>
+	</tr>
+	  </tr>
+     <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	  </tr>
+     <td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+	</tr>
+</table>
+
+ 
+ <a href="https://yandex.ru/maps/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;source=constructorStatic" target="_blank"><img id="print-map" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A63bae4dedfc9424f62dcfdd27af61ce2d745c77ca6c9342c84b00d501bf6538a&amp;width=600&amp;height=333&amp;lang=ru_RU" alt="" style="border: 0;" 
+width="256" 
+height="142"
+
+/></a>
+ 
+ 
+ 
+ <main id="print-this" width="256" 
+height="142">
+
+
+<div class="col-12 col-md-3 offset-md-8 bg-green rounded mt-5 z-index-100 p-4 contact-block-main-map">
+<h3 class="text-center font-weight-light">Режим работы</h3>
+<div class="w-100">
+<div class="d-flex justify-content-between pb-3">
+<div class="pl-5"><i class="far fa-calendar-alt fa-2x siteColorFont"></i></div>
+<div class="pr-5"><i class="far fa-clock fa-2x siteColorFont"></i></div>
+</div>
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-normal">Понедельник</h5></div>
+<div>
+<h5 class="font-weight-normal">10:00 - 16:00</h5></div>
+</div>
+<div class="d-flex justify-content-between active-day"><div>
+<h5 class="font-weight-normal">Вторник</h5></div>
+<div>
+<h5 class="font-weight-normal">10:00 - 18:00</h5></div>
+</div>
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-normal">Среда</h5></div>
+<div>
+<h5 class="font-weight-normal">09:00 - 17:00</h5></div>
+</div>
+
+
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-normal">Четверг</h5></div>
+<div>
+<h5 class="font-weight-normal">10:00 - 17:00</h5></div>
+</div>
+
+
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-normal">Пятница</h5></div>
+<div>
+<h5 class="font-weight-normal">09:00 - 17:00</h5></div>
+</div>
+
+
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-normal">Суббота</h5></div>
+<div>
+<h5 class="font-weight-normal">09:00 - 14:00</h5></div>
+</div>
+
+
+<div class="d-flex justify-content-between"><div>
+<h5 class="font-weight-bold">Воскресенье</h5></div>
+<div>
+<h5 class="font-weight-bold">Выходной</h5>
+</div>
+</div>
+
+
+<div class="w-100 border-bottom-black mb-2">
+<h5 class="font-weight-bold text-center">Обед: 13:00 - 14:00</h5>
+</div>
+
+</main>
+
+<p>
+
+    WinPrint.document.write(prtContent.innerHTML);
+  WinPrint.document.write('</div>');
+  
+  
+  prtContent.innerHTML
+
+document.getElementById()
+document.getElementsByName()
+document.getElementsByClassName()
+
+innerHTML
+outerHTML
+</p>
+ 
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+
+function TestZero(strid){
+
+        //Get the HTML of div
+        var visSrtcture = document.getElementById(strid).innerHTML;
+	var imgSrtcture = document.getElementById('print-map').innerHTML;
+        //Get the HTML of whole page
+        var oldPage = document.body.innerHTML;
+		
+	
+
+        document.body.innerHTML = 
+          "<html><body><table ><tbody>" +
+		  "<tr><th ALIGN=center>"  + 
+		  visSrtcture +	"</th><th ALIGN=center background-image:imgSrtcture >"+ visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" +
+		  
+		  "<tr><th ALIGN=center>"  + 
+		  visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture +
+		  "</th></tr>" +
+
+		  "<tr><th ALIGN=center>"  +  visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center> " +
+		  visSrtcture +  "</th></tr>" +
+
+		  "<tr><th ALIGN=center>"  +  visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center> " +
+        	  visSrtcture +  "</th></tr>" +
+
+		  "</tbody></table></body>";
+
+
+
+		//best table
+
+        window.print();
+	oldPage .body.style.width = '3508px';
+	oldPage .body.style.height = '2480px';	
+        //Restore orignal HTML
+        document.body.innerHTML = oldPage;
+}
+
+
+
+
+</script>
+   
+ </body>
+</html>
+
+
