@@ -7068,7 +7068,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media print {
   *,
-  *::before,
+  *::before{
+@page {size: landscape} 
+},
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
