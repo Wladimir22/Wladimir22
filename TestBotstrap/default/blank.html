@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+</head>
+
+<body>
+  <div class="headerBoxTop pt-3 pb-3">
+    <div class="container">
+      <div class="logoBox float-none float-md-left text-center text-md-left">
+        <div class="logoBoxInner float-left d-none d-md-block pr-3">
+          <a href="/">
+            <img src="https://xn----7sbbpjkd8agdxnjrd.xn--p1ai/sites/xn----7sbbpjkd8agdxnjrd_xn--p1ai/logo/logo.png" alt=""> </a>
+        </div>
+        <div class="ib float-none float-md-left">
+          <a href="/">
+            <h5 class="mb-0 text-white font-weight-normal text-uppercase" class="firstName">Нотариус</h5>
+            <h3 class="mb-0 text-uppercase font-weight-normal text-white" class="secondName">КОМАРОВ</h3>
+            <h3 class="mb-0 text-uppercase font-weight-normal text-white" class="thirdName">ВАДИМ ВАСЛЬЕВИЧ</h3> 
+          </a>
+          <a href="/#contacts" class="map-logo d-block d-sm-inline-block fs18 mt-1">
+            <i class="fas fa-map-marker-alt" class="stateLocation"></i> г. Красноярск, ул. Апрельская 4, пом. 1.8 </a>
+        </div>
+      </div>
+      <div class="telephoneBox float-none float-md-right d-block text-center text-md-left">
+        <ul class="nav flex-column">
+          <li class="nav-item" ><a href="tel:+73912092939" class="whatsappNumphone">+7 (391) 209-29-39 <i class="fab fa-whatsapp" ></i></a></li>
+          <li class="nav-item"><a href="tel:+79832692939" class="numPhone">+7-983-269-29-39</a></li>
+          <li class="nav-item clipboard-js-init" title="" data-toggle="tooltip" data-placement="bottom" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-text="2092939@mail.ru" data-clipboard-success="2092939@mail.ru <i class=&quot;far fa-copy&quot;></i>" data-original-title="Данный электронный адрес (электронная почта) не используется для официальной переписки">2092939@mail.ru <i class="far fa-copy"></i></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><a class="btn btn-outline-primary" href="#" onclick="javascript:TestZero1('print-this-front')">Печать Визитки Спереди</a></div>
+      </div>
+    </div>
+  </div>
+  <script>
+var state = ''
+var name
+  </script>
+
+  <div class="container-fluid" id="print-this-front" class="print-this-front">
+    <div class="row">
+
+      <div class="col-md-2 p-3" style="height: 200px;">
+        <p><img src="..\sources\logo.png" height="215" width="150"></p>
+      </div>
+      <div class="col-md-4 p-3" style="height: 200px;">
+        <h5>Нотариус </h5>
+        <p>КОМАРОВ</p>
+        <p>ВАДИМ ВАСИЛЬЕВИЧ</p>
+        <p>г. Барнаул, пр-кт Ленина, 151В</p>
+      </div>
+</div>
+<div class="row">
+     <div class="col-md-3 p-4" style="height: 70px;">
+        <p>+7 (3852) 57-08-77</p>
+        <p>+7 929-397-0877</p>
+      </div>
+      <div class="col-md-3 p-4" style="height: 70px;">
+        <p>NotariaL@mail.ru</p>
+        <p>н0тариус.РФ</p>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function TestZero(strid) {
+      //Get the HTML of div
+      var visSrtcture = document.getElementById(strid).innerHTML;
+      //Get the HTML of whole page
+      var oldPage = document.body.innerHTML;
+      document.body.innerHTML = "<html><body><table><tbody>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center> " + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tbody><table></body>";
+      //best table
+      window.print();
+      //Restore orignal HTML
+      //  <div class="py-3 text-center" id="print-this-front" >
+      //</div>
+      document.body.innerHTML = oldPage;
+    }
+
+    function TestZero1(strid) {
+	//var clhead = document.getElementsByClassName(strid);
+//= clhead.querySelectorAll('.col-lg-5').innerHTML;
+      var visSrtcture =  document.getElementById(strid).innerHTML;
+      var oldPage = document.body.innerHTML;
+      document.body.innerHTML = "<html><body><table><tbody>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center> " + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tr><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th><th ALIGN=center>" + visSrtcture + "</th></tr>" + "<tbody><table></body>";
+      //best table
+      window.print();
+      //Restore orignal HTML
+      //  <div class="py-3 text-center" id="print-this-front" >
+      //</div>
+      document.body.innerHTML = oldPage;
+    }
+
+
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" style=""></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
