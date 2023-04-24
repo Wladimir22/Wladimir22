@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <title>Test PrintInTable</title>
+</head>
+
+<body>
+  <div class="headerBoxTop pt-3 pb-3">
+    <div class="container">
+      <div class="logoBox float-none float-md-left text-center text-md-left">
+        <div class="logoBoxInner float-left d-none d-md-block pr-3">
+          <a href="/">
+            <img src="https://xn----7sbbpjkd8agdxnjrd.xn--p1ai/sites/xn----7sbbpjkd8agdxnjrd_xn--p1ai/logo/logo.png" alt=""> </a>
+        </div>
+        <div class="ib float-none float-md-left">
+          <a href="/">
+            <h5 class="printTest mb-0 text-white font-weight-normal text-uppercase">Нотариус</h5>
+            <h3 class="printTest mb-0 text-uppercase font-weight-normal text-white">КОМАРОВ</h3>
+            <h3 class="printTest mb-0 text-uppercase font-weight-normal">ВАДИМ ВАСЛЬЕВИЧ</h3>
+          </a>
+          <a href="/#contacts" class="printTest map-logo d-block d-sm-inline-block fs18 mt-1">
+            <i class="fas fa-map-marker-alt"></i> г. Барнаул, пр-кт Ленина, 151В </a>
+        </div>
+      </div>
+      <div class="telephoneBox float-none float-md-right d-block text-center text-md-left">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="tel:+73852570877" class="printTest">+7 (3852) 57-08-77 <i class="fab fa-whatsapp"></i></a></li>
+          <li class="nav-item"><a href="tel:+79293970877" class="printTest">+7 929-397-0877</a></li>
+          <li class="printTest nav-item clipboard-js-init" title="" data-toggle="tooltip" data-placement="bottom" style="cursor: pointer;" data-clipboard-action="copy" data-clipboard-text="NotariaL@mail.ru" data-clipboard-success="NotariaL@mail.ru<i class=&quot;far fa-copy&quot;></i>" data-original-title="Данный электронный адрес (электронная почта) не используется для официальной переписки">NotariaL@mail.ru<i class="far fa-copy"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container mt-5">
+      <div class="col-md-12"><a class="btn btn-outline-primary" onclick="javascript:TestZero43('printTest')">Печать Визитки Спереди 4*3</a></div>
+      <div class="col-md-12"><a class="btn btn-outline-primary" onclick="javascript:Visicode()">Печать Визитки 2 на 5</a></div>
+    </div>
+  </div>
+  <div class ="notvisible container mt-5">
+  <div class = "printOnly"><img src="..\sources\logo_mine.png" height="255" width="225" class="ml-5 mr-3 mt-5" ></div>
+  <div class = "printOnly"><img src="..\sources\line1047.png" height="13" width="1047" class="px-2"></div>
+  <div class = "printOnly"><img src="..\sources\phone.png" height="23" width="32" class="mt-2"></div>
+  <div class = "printOnly"><img src="..\sources\phone2.png" height="31" width="31" class="mt-1"></div>
+  <div class = "printOnly"><img src="..\sources\phone3.png" height="32" width="31" class="mt-1 row ml-3"></div>
+  <div class = "printOnly"><img src="..\sources\mail.png" height="24" width="30" class="mt-1"></div>
+  <div class = "printOnly"><img src="..\sources\enternet.png" height="30" width="31" class="mt-1"></div>
+  </div>
+  
+  
+  
+  <script>
+
+    function TestZero43(strid) {
+      var Datas = document.getElementsByClassName(strid);
+	  var siteUer = window.location.origin;
+      var visSrtcture = '<div class="container-fluid" style="height: 594px;	width: 1067px;"><div class="row" style="height: 467px;	width: 1067px;"> ' + '<div style="height: 467px;	width: 354px;"><div class="mr-4 mt-3 ml-4"><div class="ml-3"><img src="..\sources\logo_mine.png" height="255" width="225" class="ml-5 mr-3 mt-5">' + '</div></div></div>' + '<div class="mt-5 pl-4" style="height: 395px;	width:679 px;" ><h2 class="mt-2">' + Datas[0].innerHTML + '</h2><h1 class="mt-3">' + Datas[1].innerHTML + '</h1>' + '<h1 class="mt-3">' + Datas[2].innerHTML + '</h1><h2 class="mt-4">' + Datas[3].innerHTML + '</h2></div></div>' + '<div> <img src="..\sources\line1047.png" height="13" width="1047" class="px-2"></div><div class="row" style="height: 118px;	width: 1067px;">' + '<div style="height: 118px;	width: 593px;"><div class="row ml-5 mt-1"><img src="..\sources\phone.png" height="23" width="32" class="mt-2">' + '<h3 class=" ml-3 mt-1">' + Datas[4].innerHTML + '</h3></div><div class="row ml-5"><img src="..\sources\phone2.png" height="31" width="31" class="mt-1">' + '<h3 class="ml-3">' + Datas[5].innerHTML + '</h3><img src="..\sources\phone3.png" height="32" width="31" class="mt-1 row ml-3"></div></div>' + '<div style="height: 118px;	width: 450px;"><div class="row ml-2 mt-1"><img src="..\sources\mail.png" height="24" width="30" class="mt-1">' + '<h3 class=" ml-3">' + Datas[6].innerHTML + '</h3></div><div class="row ml-2"><img src="..\sources\enternet.png" height="30" width="31" class="mt-1">' + '<h3 class="ml-3">' + siteUer + '</h3></div></div></div></div>';
+      var oldPage = document.body.innerHTML;
+      document.body.innerHTML = ' <html><head><style>@media print {@page { size: 3508px 2480px;}}</style></head><body><table ALIGN=center><tbody><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th></tr>' +
+	  
+	  '<tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th></tr>' +
+	  
+	  '<tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">'
+	  + visSrtcture + '</th></tr><tbody><table></body></html>';
+      window.print();
+      document.body.innerHTML = oldPage;
+    }
+
+    function TestZero25(strid) {
+      var visSrtcture = document.getElementById(strid).innerHTML;
+      var oldPage = document.body.innerHTML;
+      document.body.innerHTML = ' <html><head><style>@media print {@page { size: 2480px 3508px;}}</style></head><body><table ALIGN=center><tbody><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tbody><table></body></html>';
+      window.print();
+      document.body.innerHTML = oldPage;
+    }
+
+    function Visicode() { //25
+      var Datas = document.getElementsByClassName('printTest');
+	  var ImgS = document.getElementsByClassName('printOnly');
+      var siteUer = window.location.origin;
+      var oldPage = document.body.innerHTML;
+      var visSrtcture = '<div class="container-fluid" style="height: 594px;	width: 1067px;"><div class="row" style="height: 467px;	width: 1067px;"> ' + '<div style="height: 467px;	width: 354px;"><div class="mr-4 mt-3 ml-4"><div class="ml-3">' + ImgS[0].innerHTML + '</div></div></div>' + '<div class="mt-5 pl-4" style="height: 395px;	width:679 px;" ><h2 class="mt-2">' + Datas[0].innerHTML + '</h2><h1 class="mt-3">' + Datas[1].innerHTML + '</h1>' + '<h1 class="mt-3">' + Datas[2].innerHTML + '</h1><h2 class="mt-4">' + Datas[3].innerHTML + '</h2></div></div>' + '<div>' + ImgS[1].innerHTML + '</div><div class="row" style="height: 118px;	width: 1067px;">' + '<div style="height: 118px;	width: 593px;"><div class="row ml-5 mt-1">'+ ImgS[2].innerHTML  + '<h3 class=" ml-3 mt-1">' + Datas[4].innerHTML + '</h3></div><div class="row ml-5">'+ ImgS[3].innerHTML + '<h3 class="ml-3">' + Datas[5].innerHTML + '</h3>' + ImgS[4].innerHTML +'</div></div>' + '<div style="height: 118px;	width: 450px;"><div class="row ml-2 mt-1">'+ ImgS[5].innerHTML  + '<h3 class=" ml-3">' + Datas[6].innerHTML + '</h3></div><div class="row ml-2">' + ImgS[6].innerHTML  + '<h3 class="ml-3">' + siteUer + '</h3></div></div></div></div>'; 
+      document.body.innerHTML = ' <html><head><style>@media print {@page { size: 2480px 3508px;}}</style></head><body><table ALIGN=center><tbody><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tr><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th><th ALIGN=center class = "border border-dark" style="height:620px;	width:877px;">' + visSrtcture + '</th></tr><tbody><table></body></html>';
+      window.print();
+      document.body.innerHTML = oldPage;
+      document.close();
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
