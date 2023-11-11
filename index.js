@@ -3,36 +3,11 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const https = require('https');
 
-/*
-const agent = new https.Agent({
-  rejectUnauthorized: false
-});
-const fetchTitles = async () => {
-	try {
-	 const response = await axios.get(notariatru, { httpsAgent: agent });
-   
-		   const html = response.data;
-   
-	 const $ = cheerio.load(html);
-   
-	 const titles = [];
-   
-	 $('div.w-100 > h5').each((_idx, el) => {
-	  const title = $(el).text()
-	  titles.push(title)
-	 });
-   
-	 return titles;
-	} catch (error) {
-	 throw error;
-	}
-   };
-   
-   fetchTitles().then((titles) => console.log(titles));
-*/
 
 //let notariatru = punycode.toASCII('агеева');
-let notariatru = 'https://' + punycode.toASCII('нотариус-агеева.рф');
+
+let name = 'агеева'
+let notariatru = 'https://' + punycode.toASCII(`нотариус-${name}.рф`);
 //https://xn----7sb${notariatru}.xn--p1ai/
 
 //const agent = new https.Agent({ ca: MY_CA_BUNDLE });
@@ -51,11 +26,17 @@ const fetchTitles = async () => {
    
 	 const titles = [];
    
-	 $('div.w-100 > h5').each((_idx, el) => {
+	 $('a.map-logo').each((_idx, el) => {
 	  const title = $(el).text()
 	  titles.push(title)
 	 });
-   
+   //2 номера -- норм + вотс/ мыло
+	 $('div.telephoneBox  > ul > li.nav-item ').each((_idx, el) => {
+		const title = $(el).text()
+		titles.push(title)
+	   });
+
+
 	 return titles;
 	} catch (error) {
 	 throw error;
